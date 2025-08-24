@@ -1,0 +1,62 @@
+2025/03/10-00:31:57.944 9270 Reusing MANIFEST C:\Users\Administrator\whatsapp manager\.wwebjs_auth\session-user-cparvzd2o\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
+2025/03/10-00:31:57.945 9270 Recovering log #2650
+2025/03/10-00:31:57.994 9270 Reusing old log C:\Users\Administrator\whatsapp manager\.wwebjs_auth\session-user-cparvzd2o\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/002650.log 
+2025/03/10-00:31:59.618 3684 Level-0 table #2689: started
+2025/03/10-00:31:59.626 3684 Level-0 table #2689: 282754 bytes OK
+2025/03/10-00:31:59.627 3684 Delete type=0 #2650
+2025/03/10-00:31:59.628 3684 Manual compaction at level-0 from '\x00E\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00F\x00\x00\x00' @ 0 : 0; will stop at '\x00E\x00\x00\x05' @ 7366637 : 1
+2025/03/10-00:31:59.628 3684 Compacting 1@0 + 1@1 files
+2025/03/10-00:31:59.642 3684 Generated table #2690@0: 6824 keys, 129900 bytes
+2025/03/10-00:31:59.643 3684 Generated table #2691@0: 4 keys, 1234 bytes
+2025/03/10-00:31:59.645 3684 Generated table #2692@0: 65 keys, 4345 bytes
+2025/03/10-00:31:59.649 3684 Generated table #2693@0: 1541 keys, 33252 bytes
+2025/03/10-00:31:59.649 3684 Compacted 1@0 + 1@1 files => 168731 bytes
+2025/03/10-00:31:59.650 3684 compacted to: files[ 0 4 49 0 0 0 0 ]
+2025/03/10-00:31:59.651 3684 Delete type=2 #2689
+2025/03/10-00:31:59.651 3684 Manual compaction at level-0 from '\x00E\x00\x00\x05' @ 7366637 : 1 .. '\x00F\x00\x00\x00' @ 0 : 0; will stop at (end)
+2025/03/10-00:32:01.787 5da4 Compacting 1@1 + 4@2 files
+2025/03/10-00:32:01.894 5da4 Generated table #2694@1: 37948 keys, 2227313 bytes
+2025/03/10-00:32:01.991 5da4 Generated table #2695@1: 26845 keys, 2223251 bytes
+2025/03/10-00:32:02.116 5da4 Generated table #2696@1: 30000 keys, 2336259 bytes
+2025/03/10-00:32:02.186 5da4 Generated table #2697@1: 14884 keys, 2240716 bytes
+2025/03/10-00:32:02.186 5da4 Compacted 1@1 + 4@2 files => 9027539 bytes
+2025/03/10-00:32:02.186 5da4 compacted to: files[ 0 3 49 0 0 0 0 ]
+2025/03/10-00:32:02.187 5da4 Delete type=2 #2655
+2025/03/10-00:32:02.254 8e6c Compacting 1@1 + 4@2 files
+2025/03/10-00:32:02.335 8e6c Generated table #2698@1: 47787 keys, 2213348 bytes
+2025/03/10-00:32:02.443 8e6c Generated table #2699@1: 57616 keys, 2216992 bytes
+2025/03/10-00:32:02.552 8e6c Generated table #2700@1: 58973 keys, 2228231 bytes
+2025/03/10-00:32:02.598 8e6c Generated table #2701@1: 13246 keys, 2171118 bytes
+2025/03/10-00:32:02.601 8e6c Generated table #2702@1: 26 keys, 17947 bytes
+2025/03/10-00:32:02.601 8e6c Compacted 1@1 + 4@2 files => 8847636 bytes
+2025/03/10-00:32:02.601 8e6c compacted to: files[ 0 2 50 0 0 0 0 ]
+2025/03/10-00:32:02.602 8e6c Delete type=2 #2656
+2025/03/10-00:32:02.602 8e6c Delete type=2 #2657
+2025/03/10-00:32:02.602 8e6c Delete type=2 #2658
+2025/03/10-00:32:02.602 8e6c Delete type=2 #2659
+2025/03/10-00:32:02.602 8e6c Delete type=2 #2667
+2025/03/10-00:32:02.602 8e6c Delete type=2 #2668
+2025/03/10-00:32:02.602 8e6c Delete type=2 #2669
+2025/03/10-00:32:02.602 8e6c Delete type=2 #2670
+2025/03/10-00:32:02.602 8e6c Delete type=2 #2690
+2025/03/10-00:32:02.602 8e6c Delete type=2 #2692
+2025/03/10-00:32:06.092 857c Compacting 1@1 + 8@2 files
+2025/03/10-00:32:06.127 857c Generated table #2703@1: 3975 keys, 2163985 bytes
+2025/03/10-00:32:06.159 857c Generated table #2704@1: 4021 keys, 2163051 bytes
+2025/03/10-00:32:06.192 857c Generated table #2705@1: 4037 keys, 2160901 bytes
+2025/03/10-00:32:06.229 857c Generated table #2706@1: 4095 keys, 2161529 bytes
+2025/03/10-00:32:06.297 857c Generated table #2707@1: 44977 keys, 2212304 bytes
+2025/03/10-00:32:06.377 857c Generated table #2708@1: 28379 keys, 2264832 bytes
+2025/03/10-00:32:06.452 857c Generated table #2709@1: 29537 keys, 2261844 bytes
+2025/03/10-00:32:06.524 857c Generated table #2710@1: 27994 keys, 2262833 bytes
+2025/03/10-00:32:06.524 857c Compacted 1@1 + 8@2 files => 17651279 bytes
+2025/03/10-00:32:06.525 857c compacted to: files[ 0 1 50 0 0 0 0 ]
+2025/03/10-00:32:06.525 857c Delete type=2 #2679
+2025/03/10-00:32:06.525 857c Delete type=2 #2680
+2025/03/10-00:32:06.525 857c Delete type=2 #2681
+2025/03/10-00:32:06.526 857c Delete type=2 #2682
+2025/03/10-00:32:06.526 857c Delete type=2 #2683
+2025/03/10-00:32:06.526 857c Delete type=2 #2684
+2025/03/10-00:32:06.526 857c Delete type=2 #2685
+2025/03/10-00:32:06.526 857c Delete type=2 #2686
+2025/03/10-00:32:06.526 857c Delete type=2 #2691

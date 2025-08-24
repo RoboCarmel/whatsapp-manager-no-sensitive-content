@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telegram Bot Integration</title>
+    <link rel="stylesheet" href="telegram_tab.css">
+    <script defer src="telegram_tab.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Telegram Bot Integration</h1>
+        <h2>Connected Bot: <span id="bot-name">Loading...</span></h2>
+        <div class="instruction-box">
+            <h2>How to Initialize Telegram Groups</h2>
+            <p>
+                1. Add the Telegram bot as an <strong>admin</strong> to each group you want to connect.<br><br>
+                2. Go to the <a href="select_chats.html">Select Chats</a> tab and click "Listen".<br><br>
+                3. Send a message in each group where the bot is an admin.<br><br>
+                The group will automatically be initialized and appear here.
+            </p>
+        </div>
+        
+
+        <!-- Section to Select Telegram Chats -->
+        <div id="telegram-chats-section">
+            <!-- <h2>Select Telegram Chats for Forwarding</h2> -->
+            <ul id="telegram-chats-list"></ul>
+            <!-- <button id="save-chats">Save Selection</button> -->
+        </div>
+
+        <!-- Section to Show Selected Telegram Chats -->
+        <div id="selected-chats">
+            <!-- <h2>Selected Telegram Chats</h2> -->
+            <ul id="selected-chats-list"></ul>
+        </div>
+    </div>
+     <!-- Bottom Navigation Bar -->
+     <nav class="bottom-nav">
+        <a href="select_chats.html" class="nav-item">📜 Select Chats</a>
+        <a href="telegram_tab.html" class="nav-item active">🤖 Telegram Bot</a>
+        <a href="suffix_tab.html" class="nav-item">🔤 Suffix</a>
+        <a class="nav-item">🔤 Timed Message</a>
+    </nav>
+</body>
+</html>

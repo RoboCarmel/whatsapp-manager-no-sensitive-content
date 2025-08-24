@@ -1,0 +1,27 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+#qr-container {
+    margin-top: 20px;
+}
+
+.chat-list {
+    list-style: none;
+    padding: 0;
+}
+
+.chat-list li {
+    cursor: pointer;
+    padding: 10px;
+    border: 1px solid #ddd;
+    margin: 5px;
+    display: inline-block;
+    width: 200px;
+    text-align: center;
+}
+
+.selected {
+    background-color: #c3e6cb;
+}

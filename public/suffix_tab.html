@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Suffix Settings</title>
+  <script type="module" src="/firebase_tools.js"></script>
+  <style>
+    /* General Styling */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: linear-gradient(135deg, #1f4037, #99f2c8);
+      color: white;
+      text-align: center;
+      overflow-y: auto;
+    }
+
+    /* Container Styling */
+    .container {
+      background: rgba(255, 255, 255, 0.2);
+      padding: 30px;
+      border-radius: 12px;
+      text-align: center;
+      backdrop-filter: blur(10px);
+      width: 85%;
+      max-width: 450px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+      margin-top: 60px;
+      margin-bottom: 80px;
+    }
+
+    /* Styled Input (textarea) */
+    .styled-input {
+      width: 100%;
+      padding: 10px;
+      margin-top: 15px;
+      margin-bottom: 15px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      background: rgba(255, 255, 255, 0.15);
+      color: white;
+      outline: none;
+      resize: vertical;
+      line-height: 1.5;
+      direction: auto;
+      white-space: pre-wrap;
+    }
+
+    /* Save Button */
+    #save-suffix {
+        width: 100%;
+        padding: 12px;
+        border: none;
+        border-radius: 8px;
+        background: #2ecc71;
+        color: white;
+        font-size: 18px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        margin-top: 15px;
+        font-weight: bold;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    #save-suffix:hover {
+        background: #27ae60;
+        transform: scale(1.05);
+        box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    
+    /* Bottom Navigation Bar */
+    .bottom-nav {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.3);
+        display: flex;
+        justify-content: space-around;
+        padding: 15px;
+        backdrop-filter: blur(10px);
+        z-index: 100;
+    }
+
+    .nav-item {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+        transition: 0.3s;
+    }
+
+    .nav-item:hover {
+        color: #2ecc71;
+    }
+
+    .active {
+        border-bottom: 2px solid #2ecc71;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Suffix Settings</h2>
+    <textarea id="suffix-input" placeholder="Enter suffix..." class="styled-input" rows="5" dir="auto"></textarea>
+    <button id="save-suffix">Save Suffix</button>
+  </div>
+
+   <!-- Bottom Navigation Bar -->
+   <nav class="bottom-nav">
+    <a href="select_chats.html" class="nav-item">📜 Select Chats</a>
+    <a href="telegram_tab.html" class="nav-item">🤖 Telegram Bot</a>
+    <a href="suffix_tab.html" class="nav-item active">🔤 Suffix</a>
+    <a class="nav-item">🔤 Timed Message</a>
+</nav>
+
+  <script type="module">
+    import { firestoreDB, auth } from "/firebase_tools.js";
+    import { doc, setDoc, getDoc } from 'https://www.gstatic.com/firebasejs/11.2.0/firebase-firestore.js';
+
+    document.getElementById("save-suffix").addEventListener("click", async () => {
+      const suffix = document.getElementById("suffix-input").value.trim();
+      if (!suffix) return alert("Please enter a suffix.");
+
+      const user = auth.currentUser;
+      if (!user) return alert("You are not logged in.");
+
+      try {
+        await setDoc(doc(firestoreDB, "users", user.uid), { suffix }, { merge: true });
+        alert("Suffix saved successfully!");
+      } catch (e) {
+        console.error("Error saving suffix:", e);
+        alert("Failed to save suffix.");
+      }
+    });
+
+    auth.onAuthStateChanged(async (user) => {
+      if (user) {
+        const docSnap = await getDoc(doc(firestoreDB, "users", user.uid));
+        if (docSnap.exists() && docSnap.data().suffix) {
+          document.getElementById("suffix-input").value = docSnap.data().suffix;
+        }
+      }
+    });
+  </script>
+</body>
+</html>

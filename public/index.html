@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | WhatsApp Manager</title>
+    <link rel="stylesheet" href="auth.css">
+    <script defer type="module" src="auth.js"></script>
+</head>
+<body>
+    <div id="loadingOverlay" class="loading-overlay">
+        <div class="loading-bar">Loading, please wait...</div>
+      </div>
+    
+    <!-- Cool animated background -->
+    <div class="background">
+        <div class="fly flying-circle"></div>
+        <div class="fly flying-triangle"></div>
+        <div class="fly flying-square"></div>
+    </div>
+
+    <!-- Login Form Container -->
+    <div class="auth-container">
+        <h1>WhatsApp Manager</h1>
+        <p>Securely manage and automate your messages.</p>
+        <!-- <input type="text" id="phone" placeholder="+1234567890">-->
+        <div id="recaptcha-container"></div>
+
+        <div id="code-section" style="display: none;">
+        <input type="text" id="verification-code" placeholder="Enter SMS Code">
+        <button id="verify-code-btn">Verify Code</button>
+        </div>
+
+        <!-- <button id="login-btn">Login with Phone</button> -->
+
+
+        <input type="email" id="email" placeholder="Enter your email">
+        <input type="password" id="password" placeholder="Enter your password">
+        <button id="login-btn">Login</button>
+        <button id="register-btn">Register</button>
+
+        <button id="logout-btn" style="display:none;">Logout</button>
+        <p id="auth-status"></p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Chats</title>
+    <link rel="stylesheet" href="select_chats.css">
+    <script defer src="select_chats.js"></script>
+</head>
+<body>
+    <div id="loadingOverlay" class="loading-overlay">
+        <div class="loading-bar">Loading, please wait...</div>
+      </div>
+    <!-- Select Chats Container -->
+    <div class="container">
+        <h1>Select Chats for Message Forwarding</h1>
+
+        <h2>Main Chat (Source)</h2>
+        <select id="main-chat">
+            <option value="">Select Main Chat</option>
+        </select>
+
+        <h2>Target Chats (Recipients)</h2>
+        <div id="target-chats"></div>
+
+        <button id="save-selection">Save Selection</button>
+        <button id="refresh-chats">Load Last 100 WhatsApp Calls</button>
+
+
+        <p id="status-message"></p>
+    </div>
+
+    <!-- Bottom Navigation Bar -->
+    <nav class="bottom-nav">
+        <a href="select_chats.html" class="nav-item active">📜 Select Chats</a>
+        <a href="telegram_tab.html" class="nav-item">🤖 Telegram Bot</a>
+        <a href="suffix_tab.html" class="nav-item">🔤 Suffix</a>
+        <a class="nav-item">🔤 Timed Message</a>
+    </nav>
+</body>
+</html>

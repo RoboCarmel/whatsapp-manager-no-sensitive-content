@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatsApp Manager</title>
+    <link rel="stylesheet" href="home_tab.css">
+    <script src="https://unpkg.com/qrcodejs/qrcode.min.js"></script>
+    <script defer src="app.js"></script>
+</head>
+<body>
+    <!-- Cool animated background -->
+    <div class="background">
+        <div class="fly flying-circle"></div>
+        <div class="fly flying-triangle"></div>
+        <div class="fly flying-square"></div>
+    </div>
+
+    <!-- Home Container -->
+    <div class="home-container">
+        <h1>Welcome to WhatsApp Manager</h1>
+        <p>Manage and automate your WhatsApp messages seamlessly.</p>
+
+        <div id="qr-container" class="qr-box">
+            <p>Checking connection...</p>
+        </div>
+
+        <h5 style="text-align: center; margin-top: 10px;">
+            After scanning the QR code, wait for the devices to sync and then hit refresh.
+            <br>The first time retrieving chats on the next page may take up to a minute.
+        </h5>
+
+        <button id="skip-btn" style="display: none;">Skip QR</button>
+    </div>
+</body>
+</html>
